@@ -26,16 +26,6 @@ function App() {
       serves: Number(form.serves.value),
     }
     console.log(meal)
-    
-
-    const removeMeal = async (id) => {
-      const result = await supabase.from("meals").insert(meals)
-      if (result.error){
-        console.log(result.error.messaage)
-        return
-
-      }
-      reload()
   }
 
 
