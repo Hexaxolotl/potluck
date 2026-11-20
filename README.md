@@ -19,9 +19,9 @@ Technologies
 The application uses a Supabase table named meals with these fields:
 
     id — Unique meal identifier
-    meal_name — Name of the dish
-    guest_name — Person bringing the dish
-    serves — Number of servings
+    name — Name of the dish
+    guest — Person bringing the dish
+    servings — Number of servings
 
 Testing
 

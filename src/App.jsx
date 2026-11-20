@@ -22,9 +22,9 @@ function App() {
 
     const form = event.target
     const meal = {
-      meal_name: form.mealName.value,
-      guest_name: form.guestName.value,
-      serves: Number(form.serves.value),
+      name: form.mealName.value,
+      guest: form.guestName.value,
+      servings: Number(form.serves.value),
     }
     console.log(meal)
 
