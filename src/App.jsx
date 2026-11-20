@@ -17,8 +17,9 @@ function App() {
     setMeals(data)
   }
 
-    const addMeal = (event) => {
+    const addMeal = async (event) => {
     event.preventDefault()
+
     const form = event.target
     const meal = {
       meal_name: form.mealName.value,
@@ -26,6 +27,18 @@ function App() {
       serves: Number(form.serves.value),
     }
     console.log(meal)
+
+    const {error} =  await supabase
+    .from("meals")
+    .insert(meal)
+    
+    if (error){
+      console.log(error.message)
+      return
+    }
+
+    form,reset()
+    loadMeals()
   }
 
 
