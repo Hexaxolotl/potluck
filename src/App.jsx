@@ -37,8 +37,8 @@ function App() {
       return
     }
 
-    form,reset()
-    loadMeals()
+    form.reset()
+    await loadMeals()
   }
 
 
